@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 88 | DevCore</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0b;color:white;font-family:Arial}
+nav{height:70px;background:#111;border-bottom:1px solid #2a2a2a;padding:0 8%;display:flex;align-items:center}
+.logo{font-size:25px;font-weight:bold}.logo span{color:#ff6422}
+main{max-width:500px;margin:70px auto;padding:20px}
+.card{background:#151515;border:1px solid #2a2a2a;padding:30px;border-radius:18px}
+input{width:100%;padding:14px;margin:8px 0;border-radius:8px;background:#0b0b0b;color:white;border:1px solid #d44}
+.error{color:#ff7777;font-size:13px;margin-bottom:18px}
+.valid{border-color:#4caf50}
+button{padding:13px 30px;background:#ff6422;border:0;border-radius:8px}
+</style>
+</head>
+<body>
+<nav><div class="logo">Dev<span>Core.</span></div></nav>
+<main><div class="card">
+<h1>Form Validation</h1>
+<label>Email</label>
+<input type="email" value="wrong-email">
+<div class="error">Please enter a valid email address.</div>
+<label>Password</label>
+<input class="valid" type="password" value="password123">
+<div style="color:#66bb6a;font-size:13px">Password looks good.</div>
+<br>
+<button>Submit</button>
+</div></main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 90 | DevCore</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0b;color:white;font-family:Arial}
+nav{height:70px;background:#111;border-bottom:1px solid #2a2a2a;display:flex;align-items:center;padding:0 5%}
+.logo{font-size:25px;font-weight:bold}.logo span{color:#ff6422}
+main{padding:35px 5%}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#151515;border:1px solid #2a2a2a;border-radius:15px;padding:22px}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:15px;border-bottom:1px solid #2a2a2a}
+th{color:#999}
+@media(max-width:800px){.stats{grid-template-columns:1fr 1fr}table{font-size:13px}}
+</style>
+</head>
+<body>
+<nav><div class="logo">Dev<span>Core.</span></div></nav>
+<main>
+<h1>Admin Dashboard</h1>
+<div class="stats">
+<div class="card"><small>Users</small><h2>8,420</h2></div>
+<div class="card"><small>Projects</small><h2>1,284</h2></div>
+<div class="card"><small>Reports</small><h2>438</h2></div>
+<div class="card"><small>Alerts</small><h2>12</h2></div>
+</div>
+<div class="card" style="margin-top:20px">
+<h2>Recent Users</h2>
+<table>
+<tr><th>Name</th><th>Email</th><th>Status</th></tr>
+<tr><td>Arun</td><td>arun@example.com</td><td>Active</td></tr>
+<tr><td>Priya</td><td>priya@example.com</td><td>Active</td></tr>
+<tr><td>Rahul</td><td>rahul@example.com</td><td>Pending</td></tr>
+</table>
+</div>
+</main>
+</body>
+</html>

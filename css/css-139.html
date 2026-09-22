@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 139 | DevCore</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b0b0b;color:white;font-family:Arial}
+nav{height:70px;background:#111;border-bottom:1px solid #2a2a2a;padding:0 6%;display:flex;align-items:center}
+.logo{font-size:25px;font-weight:bold}.logo span{color:#ff6422}
+main{padding:35px 6%}.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.card{background:#151515;border:1px solid #2a2a2a;border-radius:15px;padding:22px}
+.big{font-size:30px;font-weight:bold}.wide{grid-column:span 2}.chart{height:150px;display:flex;align-items:end;gap:8px}.chart i{flex:1;background:#ff6422}
+@media(max-width:800px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<nav><div class="logo">Dev<span>Core.</span></div></nav>
+<main><h1>AI Analytics Dashboard</h1><div class="grid">
+<div class="card"><small>AI Insights</small><div class="big">42</div></div><div class="card"><small>Predictions</small><div class="big">128</div></div>
+<div class="card"><small>Accuracy</small><div class="big">94%</div></div><div class="card"><small>Alerts</small><div class="big">7</div></div>
+<div class="card wide"><h2>AI Trend</h2><div class="chart"><i style="height:40%"></i><i style="height:70%"></i><i style="height:55%"></i><i style="height:90%"></i></div></div>
+<div class="card wide"><h2>AI Insight</h2><p style="color:#999">Growth is expected to continue.</p></div>
+</div></main>
+</body>
+</html>

@@ -1,0 +1,1083 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HTML | DevCore</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background: #0d0d0d;
+            color: #f2f2f2;
+            overflow-x: hidden;
+        }
+
+        /* ================= BACKGROUND ================= */
+
+        .background {
+            position: fixed;
+            inset: 0;
+            z-index: -2;
+
+            background:
+                radial-gradient(
+                    circle at 85% 15%,
+                    rgba(255, 103, 36, 0.10),
+                    transparent 28%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(255, 103, 36, 0.06),
+                    transparent 25%
+                ),
+
+                #0d0d0d;
+        }
+
+        .grid {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            opacity: 0.35;
+
+            background-image:
+                linear-gradient(
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                ),
+
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.025) 1px,
+                    transparent 1px
+                );
+
+            background-size: 55px 55px;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        nav {
+            width: 91%;
+            max-width: 1180px;
+
+            margin: 22px auto;
+
+            padding: 16px 23px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: rgba(18,18,18,0.92);
+
+            border: 1px solid #292929;
+        }
+
+        .logo {
+            font-family: "Space Grotesk", sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo span {
+            color: #ff6b2c;
+        }
+
+        nav ul {
+            list-style: none;
+
+            display: flex;
+            align-items: center;
+
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #999;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ff6b2c;
+        }
+
+        .active {
+            color: #ff6b2c !important;
+        }
+
+        .home-button {
+            padding: 9px 16px;
+
+            background: #ff6b2c;
+
+            color: white !important;
+
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background: #ff7d45;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            width: 91%;
+            max-width: 1180px;
+
+            margin: auto;
+
+            padding: 90px 0 70px;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 70px;
+
+            align-items: center;
+        }
+
+        .label {
+            color: #ff6b2c;
+
+            font-family: monospace;
+
+            font-size: 12px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: clamp(55px, 7vw, 82px);
+
+            line-height: 0.95;
+
+            letter-spacing: -4px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 span {
+            color: #ff6b2c;
+        }
+
+        .hero p {
+            max-width: 540px;
+
+            color: #909090;
+
+            font-size: 15px;
+
+            line-height: 1.8;
+        }
+
+        /* ================= HTML EDITOR ================= */
+
+        .html-visual {
+            background: #151515;
+
+            border: 1px solid #303030;
+
+            box-shadow:
+                0 25px 60px rgba(0,0,0,0.4);
+
+            transform: rotate(2deg);
+
+            transition: 0.4s;
+        }
+
+        .html-visual:hover {
+            transform: rotate(0deg) translateY(-7px);
+        }
+
+        .editor-header {
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            padding: 0 15px;
+
+            background: #191919;
+
+            border-bottom: 1px solid #292929;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #555;
+
+            margin-right: 6px;
+        }
+
+        .dot.orange {
+            background: #ff6b2c;
+        }
+
+        .filename {
+            margin-left: auto;
+
+            color: #777;
+
+            font-family: monospace;
+
+            font-size: 10px;
+        }
+
+        .code {
+            padding: 27px;
+
+            font-family: monospace;
+
+            font-size: 12px;
+
+            line-height: 2;
+
+            color: #777;
+        }
+
+        .orange {
+            color: #ff6b2c;
+        }
+
+        .blue {
+            color: #76a9d6;
+        }
+
+        .green {
+            color: #7bc99d;
+        }
+
+        .white {
+            color: #eee;
+        }
+
+        /* ================= PRACTICALS ================= */
+
+        .practicals {
+            width: 91%;
+            max-width: 1180px;
+
+            margin: 50px auto 100px;
+        }
+
+        .section-title {
+            margin-bottom: 35px;
+        }
+
+        .section-label {
+            color: #ff6b2c;
+
+            font-family: monospace;
+
+            font-size: 11px;
+
+            margin-bottom: 9px;
+        }
+
+        .section-title h2 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 38px;
+
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #777;
+
+            font-size: 13px;
+        }
+
+        /* ================= CARDS ================= */
+
+        .cards {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .card {
+            min-height: 220px;
+
+            padding: 27px;
+
+            background: #141414;
+
+            border: 1px solid #292929;
+
+            transition: 0.35s;
+
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+
+            border-color: #ff6b2c;
+        }
+
+        .number {
+            color: #555;
+
+            font-family: monospace;
+
+            font-size: 11px;
+
+            margin-bottom: 22px;
+        }
+
+        .card h3 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 20px;
+
+            margin-bottom: 10px;
+
+            color: white;
+        }
+
+        .card p {
+            color: #777;
+
+            font-size: 12px;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            color: #ff6b2c;
+
+            text-decoration: none;
+
+            font-family: monospace;
+
+            font-size: 11px;
+
+            font-weight: bold;
+        }
+
+        .card a:hover {
+            color: #ff9a70;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            margin-top: 100px;
+
+            padding: 45px 20px;
+
+            background: #080808;
+
+            border-top: 1px solid #242424;
+
+            text-align: center;
+        }
+
+        footer h3 {
+            font-family: "Space Grotesk", sans-serif;
+
+            font-size: 23px;
+
+            margin-bottom: 8px;
+        }
+
+        footer h3 span {
+            color: #ff6b2c;
+        }
+
+        footer p {
+            color: #666;
+
+            font-size: 11px;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media(max-width: 950px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media(max-width: 850px) {
+
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                padding-top: 60px;
+            }
+
+            .hero p {
+                margin: auto;
+            }
+
+        }
+
+        @media(max-width: 600px) {
+
+            nav ul li:not(:first-child) {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 55px;
+
+                letter-spacing: -2px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .code {
+                font-size: 9px;
+
+                padding: 20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <div class="background"></div>
+
+    <div class="grid"></div>
+
+
+    <!-- ================= NAVIGATION ================= -->
+
+    <nav>
+
+        <div class="logo">
+            Dev<span>Core.</span>
+        </div>
+
+
+        <ul>
+
+            <li>
+                <a href="../index.html">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="index.html" class="active">
+                    HTML
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../css/index.html">
+                    CSS
+                </a>
+            </li>
+
+
+            <li>
+                <a href="../javascript/index.html">
+                    JavaScript
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero">
+
+
+        <div>
+
+            <div class="label">
+                &gt; HTML_PRACTICALS
+            </div>
+
+
+            <h1>
+                HTML<br>
+                <span>Workspace.</span>
+            </h1>
+
+
+            <p>
+                Explore HTML through practical programs covering
+                webpage structure, lists, tables, forms, multimedia,
+                semantic elements, CSS, responsive design,
+                Bootstrap and portfolio development.
+            </p>
+
+        </div>
+
+
+        <!-- HTML CODE VISUAL -->
+
+        <div class="html-visual">
+
+
+            <div class="editor-header">
+
+                <span class="dot orange"></span>
+
+                <span class="dot"></span>
+
+                <span class="dot"></span>
+
+
+                <span class="filename">
+                    html-practical.html
+                </span>
+
+            </div>
+
+
+            <div class="code">
+
+                <div>
+                    <span class="orange">&lt;</span>
+                    <span class="blue">!DOCTYPE</span>
+                    <span class="green">html</span>
+                    <span class="orange">&gt;</span>
+                </div>
+
+                <br>
+
+                <div>
+                    <span class="orange">&lt;</span>
+                    <span class="blue">html</span>
+                    <span class="orange">&gt;</span>
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;
+                    <span class="orange">&lt;</span>
+                    <span class="blue">body</span>
+                    <span class="orange">&gt;</span>
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="orange">&lt;</span>
+                    <span class="blue">h1</span>
+                    <span class="orange">&gt;</span>
+
+                    <span class="white">
+                        Learn HTML
+                    </span>
+
+                    <span class="orange">
+                        &lt;/
+                    </span>
+
+                    <span class="blue">
+                        h1
+                    </span>
+
+                    <span class="orange">
+                        &gt;
+                    </span>
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="orange">&lt;</span>
+                    <span class="blue">p</span>
+                    <span class="orange">&gt;</span>
+
+                    <span class="green">
+                        Build webpages.
+                    </span>
+
+                    <span class="orange">
+                        &lt;/
+                    </span>
+
+                    <span class="blue">
+                        p
+                    </span>
+
+                    <span class="orange">
+                        &gt;
+                    </span>
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;
+                    <span class="orange">
+                        &lt;/
+                    </span>
+
+                    <span class="blue">
+                        body
+                    </span>
+
+                    <span class="orange">
+                        &gt;
+                    </span>
+                </div>
+
+                <div>
+                    <span class="orange">
+                        &lt;/
+                    </span>
+
+                    <span class="blue">
+                        html
+                    </span>
+
+                    <span class="orange">
+                        &gt;
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= 15 PRACTICALS ================= -->
+
+    <section class="practicals">
+
+
+        <div class="section-title">
+
+            <div class="section-label">
+                &gt; HTML_PROGRAMS
+            </div>
+
+
+            <h2>
+                15 Practical Programs
+            </h2>
+
+
+            <p>
+                Select a program to open the practical code.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <!-- 01 -->
+
+            <div class="card">
+
+                <div class="number">// 01</div>
+
+                <h3>
+                    Basic HTML
+                </h3>
+
+                <p>
+                    Create a webpage using headings,
+                    paragraphs and line breaks.
+                </p>
+
+                <a href="html-01.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="card">
+
+                <div class="number">// 02</div>
+
+                <h3>
+                    HTML Lists
+                </h3>
+
+                <p>
+                    Create ordered, unordered and
+                    description lists.
+                </p>
+
+                <a href="html-02.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="card">
+
+                <div class="number">// 03</div>
+
+                <h3>
+                    HTML Tables
+                </h3>
+
+                <p>
+                    Create tables with rows, columns,
+                    borders and merged cells.
+                </p>
+
+                <a href="html-03.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="card">
+
+                <div class="number">// 04</div>
+
+                <h3>
+                    Images & Hyperlinks
+                </h3>
+
+                <p>
+                    Add images and hyperlinks to
+                    an HTML webpage.
+                </p>
+
+                <a href="html-04.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="card">
+
+                <div class="number">// 05</div>
+
+                <h3>
+                    Registration Form
+                </h3>
+
+                <p>
+                    Create a student registration form
+                    using HTML form elements.
+                </p>
+
+                <a href="html-05.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="card">
+
+                <div class="number">// 06</div>
+
+                <h3>
+                    Audio & Video
+                </h3>
+
+                <p>
+                    Add audio and video elements
+                    to a webpage.
+                </p>
+
+                <a href="html-06.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 07 -->
+
+            <div class="card">
+
+                <div class="number">// 07</div>
+
+                <h3>
+                    Frames & Iframes
+                </h3>
+
+                <p>
+                    Demonstrate iframe and
+                    embedded webpage content.
+                </p>
+
+                <a href="html-07.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 08 -->
+
+            <div class="card">
+
+                <div class="number">// 08</div>
+
+                <h3>
+                    Semantic Elements
+                </h3>
+
+                <p>
+                    Use header, nav, section,
+                    article and footer elements.
+                </p>
+
+                <a href="html-08.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 09 -->
+
+            <div class="card">
+
+                <div class="number">// 09</div>
+
+                <h3>
+                    HTML5 Input Types
+                </h3>
+
+                <p>
+                    Demonstrate email, date, number,
+                    password and other inputs.
+                </p>
+
+                <a href="html-09.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 10 -->
+
+            <div class="card">
+
+                <div class="number">// 10</div>
+
+                <h3>
+                    College Timetable
+                </h3>
+
+                <p>
+                    Create a college timetable using
+                    HTML tables and merged cells.
+                </p>
+
+                <a href="html-10.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 11 -->
+
+            <div class="card">
+
+                <div class="number">// 11</div>
+
+                <h3>
+                    Internal & External CSS
+                </h3>
+
+                <p>
+                    Demonstrate internal and external
+                    stylesheet usage in HTML.
+                </p>
+
+                <a href="html-11.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 12 -->
+
+            <div class="card">
+
+                <div class="number">// 12</div>
+
+                <h3>
+                    CSS Selectors & Styling
+                </h3>
+
+                <p>
+                    Demonstrate selectors, colors, fonts,
+                    margins, padding and borders.
+                </p>
+
+                <a href="html-12.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 13 -->
+
+            <div class="card">
+
+                <div class="number">// 13</div>
+
+                <h3>
+                    Responsive Webpage
+                </h3>
+
+                <p>
+                    Create a responsive webpage using
+                    CSS media queries.
+                </p>
+
+                <a href="html-13.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 14 -->
+
+            <div class="card">
+
+                <div class="number">// 14</div>
+
+                <h3>
+                    Bootstrap Components
+                </h3>
+
+                <p>
+                    Create a webpage using Bootstrap
+                    components and responsive layout.
+                </p>
+
+                <a href="html-14.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+            <!-- 15 -->
+
+            <div class="card">
+
+                <div class="number">// 15</div>
+
+                <h3>
+                    Personal Portfolio
+                </h3>
+
+                <p>
+                    Create a personal portfolio webpage
+                    using HTML and CSS.
+                </p>
+
+                <a href="html-15.html">
+                    OPEN_PROGRAM →
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <h3>
+            Dev<span>Core.</span>
+        </h3>
+
+        <p>
+            HTML Practical Laboratory
+        </p>
+
+        <p style="margin-top:8px;">
+            15 Practical Programs
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
