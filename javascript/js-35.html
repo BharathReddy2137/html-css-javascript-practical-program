@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-35 | Stopwatch</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-35 / JAVASCRIPT LAB</div><h1>Stopwatch</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><button class="btn" onclick="startWatch()">Start</button> <button class="btn secondary" onclick="stopWatch()">Stop</button> <button class="btn secondary" onclick="resetWatch()">Reset</button><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>let start=0,timer; function startWatch(){if(!timer){start=Date.now()-(Number(out.dataset.elapsed||0));timer=setInterval(()=&gt;{let e=Date.now()-start;out.dataset.elapsed=e;out.textContent=(e/1000).toFixed(1)+&#x27; seconds&#x27;},100)}} function stopWatch(){clearInterval(timer);timer=null} function resetWatch(){stopWatch();out.dataset.elapsed=0;out.textContent=&#x27;0.0 seconds&#x27;} resetWatch();</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 35</footer>
+<script>let start=0,timer; function startWatch(){if(!timer){start=Date.now()-(Number(out.dataset.elapsed||0));timer=setInterval(()=>{let e=Date.now()-start;out.dataset.elapsed=e;out.textContent=(e/1000).toFixed(1)+' seconds'},100)}} function stopWatch(){clearInterval(timer);timer=null} function resetWatch(){stopWatch();out.dataset.elapsed=0;out.textContent='0.0 seconds'} resetWatch();</script></body></html>

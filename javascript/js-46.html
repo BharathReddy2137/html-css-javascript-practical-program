@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-46 | Responsive Login Validation</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-46 / JAVASCRIPT LAB</div><h1>Responsive Login Validation</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><input id="user" placeholder="Username"><input id="pass" type="password" placeholder="Password"><br><br><button class="btn" onclick="login()">Login</button><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>function login(){out.textContent=(user.value===&#x27;student&#x27;&amp;&amp;pass.value===&#x27;12345678&#x27;)?&#x27;Login details accepted.&#x27;:&#x27;Check username and password.&#x27;}</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 46</footer>
+<script>function login(){out.textContent=(user.value==='student'&&pass.value==='12345678')?'Login details accepted.':'Check username and password.'}</script></body></html>

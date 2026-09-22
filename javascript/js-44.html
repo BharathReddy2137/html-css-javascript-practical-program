@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-44 | Display API Data Dynamically</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-44 / JAVASCRIPT LAB</div><h1>Display API Data Dynamically</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>async function load(){try{let r=await fetch(&#x27;https://jsonplaceholder.typicode.com/users?_limit=5&#x27;);let data=await r.json();out.innerHTML=data.map(u=&gt;`&lt;div class=&quot;badge&quot;&gt;${u.name} — ${u.email}&lt;/div&gt;`).join(&#x27;&lt;br&gt;&lt;br&gt;&#x27;)}catch(e){out.textContent=&#x27;Could not load API data.&#x27;}} load();</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 44</footer>
+<script>async function load(){try{let r=await fetch('https://jsonplaceholder.typicode.com/users?_limit=5');let data=await r.json();out.innerHTML=data.map(u=>`<div class="badge">${u.name} — ${u.email}</div>`).join('<br><br>')}catch(e){out.textContent='Could not load API data.'}} load();</script></body></html>

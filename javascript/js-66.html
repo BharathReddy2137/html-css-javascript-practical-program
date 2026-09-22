@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-66 | Regular Expressions</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-66 / JAVASCRIPT LAB</div><h1>Regular Expressions</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>const text=&#x27;Room 204, Block B&#x27;;out.textContent=`Digits: ${text.match(/\d+/g).join(&#x27;, &#x27;)}\nHas Block: ${/Block/.test(text)}`;</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 66</footer>
+<script>const text='Room 204, Block B';out.textContent=`Digits: ${text.match(/\d+/g).join(', ')}\nHas Block: ${/Block/.test(text)}`;</script></body></html>

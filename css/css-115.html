@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS 115 | DevCore</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0b;color:white;font-family:Arial}
+nav{height:70px;background:#111;border-bottom:1px solid #2a2a2a;padding:0 6%;display:flex;align-items:center}
+.logo{font-size:25px;font-weight:bold}.logo span{color:#ff6422}
+main{max-width:850px;margin:50px auto;padding:20px}
+.card{background:#151515;border:1px solid #2a2a2a;border-radius:16px;padding:30px}
+button{padding:12px 20px;border-radius:8px;border:1px solid #333;background:#111;color:white;margin:5px}
+.primary{background:#ff6422;color:#111;border-color:#ff6422}
+table{width:100%;border-collapse:collapse;margin-top:25px}
+td,th{padding:14px;border-bottom:1px solid #2a2a2a;text-align:left}
+</style>
+</head>
+<body>
+<nav><div class="logo">Dev<span>Core.</span></div></nav>
+<main>
+<h1>Analytics Report</h1>
+<div class="card">
+<button class="primary">Export CSV</button>
+<button>Export PDF</button>
+<button>Print Report</button>
+<table>
+<tr><th>Metric</th><th>Current</th><th>Previous</th></tr>
+<tr><td>Revenue</td><td>$82K</td><td>$70K</td></tr>
+<tr><td>Users</td><td>18.4K</td><td>16.2K</td></tr>
+<tr><td>Conversion</td><td>8.4%</td><td>7.1%</td></tr>
+</table>
+</div>
+</main>
+</body>
+</html>

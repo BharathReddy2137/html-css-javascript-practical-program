@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-09 | Palindrome Number</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-09 / JAVASCRIPT LAB</div><h1>Palindrome Number</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>const n=1221,s=String(n); document.getElementById(&#x27;out&#x27;).textContent=`${n} is ${s===s.split(&#x27;&#x27;).reverse().join(&#x27;&#x27;)?&#x27;a palindrome&#x27;:&#x27;not a palindrome&#x27;}`;</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 09</footer>
+<script>const n=1221,s=String(n); document.getElementById('out').textContent=`${n} is ${s===s.split('').reverse().join('')?'a palindrome':'not a palindrome'}`;</script></body></html>

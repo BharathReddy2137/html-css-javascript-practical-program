@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-32 | To-Do List</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-32 / JAVASCRIPT LAB</div><h1>To-Do List</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><input id="task" placeholder="Write a task"><br><br><button class="btn" onclick="addTask()">Add Task</button><ul id="list" style="line-height:2"></ul><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>function addTask(){if(task.value.trim()){let li=document.createElement(&#x27;li&#x27;);li.textContent=task.value;li.onclick=()=&gt;li.remove();list.appendChild(li);task.value=&#x27;&#x27;}}</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 32</footer>
+<script>function addTask(){if(task.value.trim()){let li=document.createElement('li');li.textContent=task.value;li.onclick=()=>li.remove();list.appendChild(li);task.value=''}}</script></body></html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-29 | Number Guessing Game</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-29 / JAVASCRIPT LAB</div><h1>Number Guessing Game</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><input id="guessInput" type="number" min="1" max="10" placeholder="Guess 1-10"><br><br><button class="btn" onclick="guess()">Check Guess</button><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>let secret=Math.floor(Math.random()*10)+1; function guess(){let n=Number(guessInput.value); out.textContent=n===secret?&#x27;Correct! You guessed it.&#x27;:n&lt;secret?&#x27;Try a larger number.&#x27;:&#x27;Try a smaller number.&#x27;}</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 29</footer>
+<script>let secret=Math.floor(Math.random()*10)+1; function guess(){let n=Number(guessInput.value); out.textContent=n===secret?'Correct! You guessed it.':n<secret?'Try a larger number.':'Try a smaller number.'}</script></body></html>

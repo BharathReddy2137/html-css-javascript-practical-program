@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-26 | Change Image on Button Click</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-26 / JAVASCRIPT LAB</div><h1>Change Image on Button Click</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><img id="demoImg" src="https://dummyimage.com/420x220/222222/ffffff&text=Original+Image" style="max-width:100%;border-radius:8px"><br><br><button class="btn" id="imgBtn">Change Image</button><div id="out" class="output">Result will appear here.</div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>document.getElementById(&#x27;imgBtn&#x27;).onclick=()=&gt;document.getElementById(&#x27;demoImg&#x27;).src=&#x27;https://dummyimage.com/420x220/ff6426/ffffff&amp;text=JavaScript+Changed+It&#x27;;</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 26</footer>
+<script>document.getElementById('imgBtn').onclick=()=>document.getElementById('demoImg').src='https://dummyimage.com/420x220/ff6426/ffffff&text=JavaScript+Changed+It';</script></body></html>

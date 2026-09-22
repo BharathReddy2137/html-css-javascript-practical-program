@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>JS-34 | Counter Application</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="nav"><a class="logo" href="index.html">Dev<span>Core.</span></a>
+<nav class="navlinks"><a href="index.html">Home</a><a href="index.html#html">HTML</a><a href="index.html#css">CSS</a><a href="index.html#javascript">JavaScript</a><a class="navbtn" href="index.html#javascript">Explore</a></nav></header>
+<main class="page"><a class="back" href="index.html#javascript">← Back to JavaScript Lab</a>
+<section class="labhead"><div class="num">JS-34 / JAVASCRIPT LAB</div><h1>Counter Application</h1>
+<p>Practical browser-based experiment for the WebTech Practical Hub. Use the controls to run the example and inspect the JavaScript logic.</p></section>
+<section class="workspace"><div class="panel"><h2>Experiment</h2><button class="btn" onclick="dec()">−</button> <button class="btn" onclick="inc()">+</button> <div id="out" class="output" style="font-size:32px;text-align:center"></div></div>
+<div class="panel"><h2>Source Logic</h2><pre><code>let count=0; function update(){out.textContent=count} function inc(){count++;update()} function dec(){count--;update()} update();</code></pre></div></section></main>
+<footer>WebTech Practical Hub · JavaScript Experiment 34</footer>
+<script>let count=0; function update(){out.textContent=count} function inc(){count++;update()} function dec(){count--;update()} update();</script></body></html>
